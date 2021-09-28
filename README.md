@@ -5,16 +5,19 @@ Installation
 Run npm install command to download all the npm packages.
 
 Running
+
 Run `npm run dev` to start the server.
 
 Running on http://127.0.0.1:5000/
 Restarting with reloader nodemon
 
 Problem statment 
+
 This assignment is about users and tasks. A new user can sign up itself. After signing up user can login with same credentials and create a new task, see all the task created by him/her, edit those tasks and delete them also. User can edit profile and delete it also. Deleting the profile will eventually delete all the tasks created by user.
 
 
 1. Sign up
+
   curl -X POST \
   http://localhost:3000/users \
   -H 'cache-control: no-cache' \
@@ -28,6 +31,7 @@ This assignment is about users and tasks. A new user can sign up itself. After s
 }'
 
 2. Log in
+
   curl -X POST \
   http://localhost:3000/users/login \
   -H 'cache-control: no-cache' \
@@ -38,7 +42,8 @@ This assignment is about users and tasks. A new user can sign up itself. After s
 	"password":"Red12345665!"
 }'
 
-3. Create task 
+3. Create task
+ 
 curl -X POST \
   http://localhost:3000/tasks \
   -H 'authorization: Bearer ${token}' \
@@ -51,6 +56,7 @@ curl -X POST \
 }'
 
 4. Get tasks
+
  curl -X GET \
   http://localhost:3000/tasks \
   -H 'cache-control: no-cache' \
